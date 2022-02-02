@@ -4,6 +4,8 @@ import 'package:pssword_app/pkg/presentation/pages/home/menu-phone.dart';
 import 'package:pssword_app/pkg/presentation/pages/register/register.dart';
 
 class LoginPhone extends StatelessWidget {
+  static const valueKey = ValueKey('LoginPhone');
+
   const LoginPhone({
     required this.width,
     required this.height,
@@ -72,7 +74,7 @@ class LoginPhone extends StatelessWidget {
                   TextButton(
                     onPressed: () {
                       Navigator.of(context).push(
-                          MaterialPageRoute(builder: (context) => RegInfo()));
+                          MaterialPageRoute(builder: (context) => RegisterPage()));
                     },
                     style: TextButton.styleFrom(
                       textStyle: const TextStyle(fontSize: 15),

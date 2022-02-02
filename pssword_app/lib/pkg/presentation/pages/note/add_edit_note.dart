@@ -2,14 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:pssword_app/config/layout.dart';
 import 'package:pssword_app/config/theme/dark.dart';
 
-class AddEditNote extends StatefulWidget {
-  const AddEditNote({Key? key}) : super(key: key);
+class AddEditNote extends StatelessWidget {
+  static const valueKey = ValueKey('AddEditNote');
 
-  @override
-  _AddEditNoteState createState() => _AddEditNoteState();
-}
-
-class _AddEditNoteState extends State<AddEditNote> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;

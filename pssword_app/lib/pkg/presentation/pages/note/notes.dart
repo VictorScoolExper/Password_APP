@@ -3,14 +3,9 @@ import 'package:pssword_app/config/layout.dart';
 import 'package:pssword_app/config/theme/dark.dart';
 import 'package:pssword_app/pkg/presentation/pages/note/widgets/noteCard.dart';
 
-class NotesMain extends StatefulWidget {
-  const NotesMain({Key? key}) : super(key: key);
+class NotesMain extends StatelessWidget {
 
-  @override
-  _NotesMainState createState() => _NotesMainState();
-}
 
-class _NotesMainState extends State<NotesMain> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;

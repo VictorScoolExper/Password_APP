@@ -15,7 +15,7 @@ import 'package:pssword_app/pkg/presentation/pages/setting/settings.dart';
 
 
 class MenuPhoneScrn extends ConsumerWidget {
-
+  static const valueKey = ValueKey('MenuPhoneScrn');
 
 
 //list of options for bottom buttons

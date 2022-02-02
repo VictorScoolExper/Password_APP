@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:pssword_app/pkg/presentation/pages/home/menu-phone.dart';
 
-class RegInfo extends StatelessWidget {
+class RegisterPage extends StatelessWidget {
+  static const valueKey = ValueKey('RegisterPage');
+
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
   @override

@@ -114,7 +114,7 @@ class _LoginTabletState extends State<LoginTablet> {
                         primary: Color(0xffb7fffcd)),
                     onPressed: () {
                       Navigator.of(context)
-                          .push(MaterialPageRoute(builder: (context) => RegInfo()));
+                          .push(MaterialPageRoute(builder: (context) => RegisterPage()));
                     },
                     child: const Text('Register'),
                   ),

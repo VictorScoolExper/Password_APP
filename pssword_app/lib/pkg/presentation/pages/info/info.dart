@@ -3,14 +3,8 @@ import 'package:flutter/rendering.dart';
 import 'package:pssword_app/config/theme/dark.dart';
 import '../../../../config/layout.dart';
 
-class InfoHome extends StatefulWidget {
-  const InfoHome({Key? key}) : super(key: key);
-
-  @override
-  _InfoHomeState createState() => _InfoHomeState();
-}
-
-class _InfoHomeState extends State<InfoHome> {
+class InfoHome extends StatelessWidget {
+  static const valueKey = ValueKey('InfoHome');
 
   @override
   Widget build(BuildContext context) {

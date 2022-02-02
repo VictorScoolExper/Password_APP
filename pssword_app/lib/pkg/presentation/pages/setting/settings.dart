@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pssword_app/config/theme/dark.dart';
 
 class SettingsPage extends StatefulWidget {
-  const SettingsPage({Key? key}) : super(key: key);
+  static const valueKey = ValueKey('RegisterPage');
 
   @override
   State<SettingsPage> createState() => _SettingsPageState();

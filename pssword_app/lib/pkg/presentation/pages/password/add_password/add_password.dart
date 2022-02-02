@@ -1,14 +1,8 @@
 import 'package:flutter/material.dart';
 
 
-class AddPassword extends StatefulWidget {
-  const AddPassword({Key? key}) : super(key: key);
-
-  @override
-  _AddPasswordState createState() => _AddPasswordState();
-}
-
-class _AddPasswordState extends State<AddPassword> {
+class AddPassword extends StatelessWidget {
+  static const valueKey = ValueKey('AddPassword');
 
 
   @override

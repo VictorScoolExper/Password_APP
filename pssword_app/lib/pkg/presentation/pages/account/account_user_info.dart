@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class AccountUserInfo extends StatelessWidget {
+  static const valueKey = ValueKey('AccountUserInfo');
+
   const AccountUserInfo({Key? key}) : super(key: key);
 
   @override
