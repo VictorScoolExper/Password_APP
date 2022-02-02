@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pssword_app/config/theme/dark.dart';
 import 'package:pssword_app/pkg/presentation/pages/password/add_password/add_password.dart';
 import 'package:pssword_app/pkg/presentation/pages/password/view_password/listPassword.dart';
 
@@ -12,8 +13,6 @@ class MenuTablet extends StatefulWidget {
 }
 
 class _MenuTabletState extends State<MenuTablet> {
-
-
   int index = 0;
   int home = 0;
   int addPass = 1;
@@ -23,42 +22,50 @@ class _MenuTabletState extends State<MenuTablet> {
   Icon homeIcon = Icon(
     Icons.home_sharp,
     size: 25,
+    color: Colors.white,
   );
   Icon addIcon = Icon(
     Icons.add_circle,
     size: 25,
+    color: Colors.white,
   );
   Icon notesIcon = Icon(
     Icons.note_rounded,
     size: 25,
+    color: Colors.white,
   );
   Icon settingIcon = Icon(
     Icons.settings,
     size: 25,
+    color: Colors.white,
   );
 
   Text homeText = Text(
     'Home',
     style: TextStyle(
       fontSize: 15,
+      color: Colors.white,
     ),
   );
   Text passText = Text(
     'Add Password',
     style: TextStyle(
-      fontSize: 15,
+      fontSize: 13,
+      color: Colors.white,
     ),
   );
   Text notesText = Text(
     'note',
     style: TextStyle(
       fontSize: 15,
+      color: Colors.white,
     ),
   );
   Text settingText = Text(
     'Setting',
     style: TextStyle(
       fontSize: 15,
+      color: Colors.white,
     ),
   );
 
@@ -86,8 +93,7 @@ class _MenuTabletState extends State<MenuTablet> {
     ),
   ];
 
-
-  void onItemTapped(tapped){
+  void onItemTapped(tapped) {
     setState(() {
       this.index = tapped;
     });
@@ -118,71 +124,109 @@ class _MenuTabletState extends State<MenuTablet> {
                 ),
                 color: Color(0xffb252525),
               ),
-              width: width / 4,
+              width: width / 5,
               height: height,
               child: Column(
                 children: <Widget>[
-                  Container(height: height/6, width: width/4,  color: Colors.deepOrange,),
-                  SizedBox(height: 35,),
-                  GestureDetector(
-                    child: Container(
-                      height: height / 15,
-                      color: Colors.amber,
-                      margin: EdgeInsets.only(top: 10),
-                      padding: EdgeInsets.all(10),
-                      child: Row(
-                        children: <Widget>[homeIcon, SizedBox(width: 10),homeText],
-                      ),
+                  Container(
+                    margin: EdgeInsets.all(10),
+                    height: height / 5,
+                    width: width / 5,
+                    color: Color(0xffb383838),
+                    child: Column(
+                      children: <Widget>[
+                        Padding(padding: EdgeInsets.all(10),child: Icon(Icons.account_circle, size: height/10, color: Colors.white,), ),
+                        Text('User Name', style: TextStyle(fontSize: 20, color: Colors.white),),
+                        TextButton(onPressed: (){}, child: Text('View Profile', style: TextStyle(fontSize: 15, color: Colors.white),))
+                      ],
                     ),
-                    onTap: ()=>onItemTapped(home),
+                  ),
+                  SizedBox(
+                    height: 35,
                   ),
                   GestureDetector(
                     child: Container(
                       height: height / 15,
-                      color: Colors.amber,
+                      color: Color(0xffb383838),
                       margin: EdgeInsets.only(top: 10),
                       padding: EdgeInsets.all(10),
                       child: Row(
-                        children: <Widget>[addIcon, SizedBox(width: 10),passText],
+                        children: <Widget>[
+                          homeIcon,
+                          SizedBox(width: 10),
+                          homeText
+                        ],
                       ),
                     ),
-                    onTap: ()=>onItemTapped(addPass),
+                    onTap: () => onItemTapped(home),
                   ),
                   GestureDetector(
                     child: Container(
                       height: height / 15,
-                      color: Colors.amber,
+                      color: Color(0xffb383838),
                       margin: EdgeInsets.only(top: 10),
                       padding: EdgeInsets.all(10),
                       child: Row(
-                        children: <Widget>[notesIcon, SizedBox(width: 10),notesText],
+                        children: <Widget>[
+                          addIcon,
+                          SizedBox(width: 10),
+                          passText
+                        ],
                       ),
                     ),
-                    onTap: ()=>onItemTapped(notes),
+                    onTap: () => onItemTapped(addPass),
                   ),
                   GestureDetector(
                     child: Container(
                       height: height / 15,
-                      color: Colors.amber,
+                      color: Color(0xffb383838),
                       margin: EdgeInsets.only(top: 10),
                       padding: EdgeInsets.all(10),
                       child: Row(
-                        children: <Widget>[settingIcon, SizedBox(width: 10),settingText],
+                        children: <Widget>[
+                          notesIcon,
+                          SizedBox(width: 10),
+                          notesText
+                        ],
                       ),
                     ),
-                    onTap: ()=>onItemTapped(setting),
+                    onTap: () => onItemTapped(notes),
+                  ),
+                  GestureDetector(
+                    child: Container(
+                      height: height / 15,
+                      color: Color(0xffb383838),
+                      margin: EdgeInsets.only(top: 10),
+                      padding: EdgeInsets.all(10),
+                      child: Row(
+                        children: <Widget>[
+                          settingIcon,
+                          SizedBox(width: 10),
+                          settingText
+                        ],
+                      ),
+                    ),
+                    onTap: () => onItemTapped(setting),
                   ),
                 ],
               ),
             ),
             //This will contain the password list
             Container(
-              width: width - (width / 4),
+              width: width - (width / 5),
               height: height,
               child: _widgetOptions.elementAt(index),
             ),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () {
+          // Add your onPressed code here!
+        },
+        label: const Text('Add'),
+        icon: const Icon(Icons.add),
+        backgroundColor: Colors.green,
       ),
     );
   }

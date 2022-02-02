@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:pssword_app/pkg/presentation/display/widget_tree.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:pssword_app/pkg/presentation/pages/home/menu-phone.dart';
 import 'package:pssword_app/pkg/presentation/pages/home/providers/floatingBtn_index_Provider.dart';
+import 'package:pssword_app/pkg/presentation/pages/password/add_password/add_password.dart';
+import 'package:pssword_app/pkg/presentation/pages/setting/settings.dart';
 
 
 
@@ -27,9 +30,13 @@ class MyApp extends ConsumerWidget {
         home: Navigator(
           pages: [
             MaterialPage(child: WidgetTree()),
-
+            //MaterialPage(child: MenuPhoneScrn()),
+            //MaterialPage(child: SettingsPage()),
+            //MaterialPage(child: AddPassword()),
           ],
           onPopPage: (route, result) {
+            final page = route.settings as MaterialPage;
+            //if(page.key == )
             //here we reset the index
             ref.read(indexProvider.state).state = 0;
             return route.didPop(result);
