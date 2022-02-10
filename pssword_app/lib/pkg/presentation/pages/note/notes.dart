@@ -15,19 +15,48 @@ class NotesMain extends StatelessWidget {
       height: height,
       color: backgroundColor,
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          sizeBox_h20,
-          Center(
-            child: Text(
-              'Notes',
-              style: TextStyle(fontSize: 30, color: white),
+          Container(
+            height: 110,
+            child: Column(
+              children: <Widget>[
+                sizeBox_h20,
+                Padding(
+                  padding: EdgeInsets.fromLTRB(5, 5, 0, 5),
+                  child: Text(
+                    'Notes',
+                    style: TextStyle(fontSize: 30, color: white),
+                  ),
+                ),
+                sizeBox_h35,
+              ],
             ),
           ),
-          sizeBox_h35,
-          NoteCard(
-            scrnSizeLrg: false,
+
+          Container(
+            padding: const EdgeInsets.all(0),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+            ),
+            height: height - 300,
+            child: ListView(
+                children: <Widget>[
+                  NoteCard(
+                    scrnSizeLrg: false,
+                  ),
+                  NoteCard(
+                    scrnSizeLrg: false,
+                  ),
+                  NoteCard(
+                    scrnSizeLrg: false,
+                  ),
+                  
+                ],
+            ),
+
           ),
+
         ],
       ),
     );
